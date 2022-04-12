@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomRotation : MonoBehaviour
+public class AnimalSpawner : MonoBehaviour
 {
-  private Vector3 rotation;
+    public ArrayList[][] Animals;
     // Start is called before the first frame update
     void Start()
     {
-        rotation = new Vector3(Random.Range(-5,5), Random.Range(-5, 5), Random.Range(-5, 5));
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotation, Space.World);
+        
     }
 }
