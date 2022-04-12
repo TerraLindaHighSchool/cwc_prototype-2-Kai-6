@@ -5,17 +5,19 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
   public float speed = 20.0f;
-  public Vector3 rotation;
+  public bool worldSpace = false;
     // Start is called before the first frame update
     void Start()
     {
-      rotation = new Vector3(Random.Range(-10,10), Random.Range(-10, 10), Random.Range(-10, 10));
     }
 
     // Update is called once per frame
     void Update()
     {
+      if(worldSpace) {
         transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
-        transform.Rotate(rotation, Space.World);
+      } else {
+        transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.Self);
+      }
     }
 }
