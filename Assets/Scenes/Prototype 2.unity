@@ -453,7 +453,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 45
-  orthographic: 0
+  orthographic: 1
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 10
+  speed: 20
   xRange: 10
   projectilePrefabs:
   - {fileID: 6323066817649888134, guid: 2b857595c8f58844b8a41d8539deabd1, type: 3}
@@ -1194,7 +1194,7 @@ GameObject:
   - component: {fileID: 1469772299}
   - component: {fileID: 1469772298}
   m_Layer: 0
-  m_Name: AnimalSpawner
+  m_Name: SpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1209,9 +1209,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1469772297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b13cf0164818ab439ba8a98268967bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 9eb3650d6566d8649a86c724814d78d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalPrefabs:
+  - {fileID: 8966563065675441766, guid: 1a26e8805b0ace94fa49ab9272018052, type: 3}
+  - {fileID: 3488116296796906474, guid: 97e5e93263f67f7488400ed56b38e201, type: 3}
+  - {fileID: 2743346034808785112, guid: 2f5cb8d481a03f248abe9165b325dac2, type: 3}
+  - {fileID: 1716085618887016745, guid: dcf0253c3ef17354fa347767524325ba, type: 3}
+  - {fileID: 7604900698131329365, guid: 2efa4536a2fcbb34a912571eabe1c01d, type: 3}
+  - {fileID: 3248648249413541246, guid: 5d9943b3dacc5a74cba760bc4bd24dd4, type: 3}
+  - {fileID: 8516640305145252329, guid: c33fc6e170371c14993cc36231c4402c, type: 3}
 --- !u!4 &1469772299
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,7 +1228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469772297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.324169, y: 11.229447, z: -0.46109033}
+  m_LocalPosition: {x: 0, y: 0, z: 57.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

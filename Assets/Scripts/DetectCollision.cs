@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimalSpawner : MonoBehaviour
+public class DetectCollision : MonoBehaviour
 {
-    public ArrayList[][] Animals;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +14,11 @@ public class AnimalSpawner : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
 }
